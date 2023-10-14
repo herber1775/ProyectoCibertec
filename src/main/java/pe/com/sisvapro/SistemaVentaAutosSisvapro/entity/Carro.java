@@ -45,4 +45,86 @@ public class Carro {
     @JoinColumn(name = "id_marca")
     Marca objMarca;
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getOrigen() {
+		return origen;
+	}
+
+	public void setOrigen(String origen) {
+		this.origen = origen;
+	}
+
+	public String getCombustible() {
+		return Combustible;
+	}
+
+	public void setCombustible(String combustible) {
+		Combustible = combustible;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public int getAnio() {
+		return anio;
+	}
+
+	public void setAnio(int anio) {
+		this.anio = anio;
+	}
+
+	public String getNroSerie() {
+		return nroSerie;
+	}
+
+	public void setNroSerie(String nroSerie) {
+		this.nroSerie = nroSerie;
+	}
+
+	public Marca getObjMarca() {
+		return objMarca;
+	}
+
+	public void setObjMarca(Marca objMarca) {
+		this.objMarca = objMarca;
+	}
+    
+    
+
 }
