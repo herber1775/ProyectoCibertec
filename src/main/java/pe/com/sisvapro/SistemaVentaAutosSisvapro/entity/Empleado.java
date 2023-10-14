@@ -14,7 +14,7 @@ public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_empleado")
-    private String idEmpleado;
+    private int idEmpleado;
 
     @Column(name = "dni")
     private String dni;
@@ -42,11 +42,11 @@ public class Empleado {
     TipoEmpleado objTipo;
 
     
-	public String getIdEmpleado() {
+	public int getIdEmpleado() {
 		return idEmpleado;
 	}
 
-	public void setIdEmpleado(String idEmpleado) {
+	public void setIdEmpleado(int idEmpleado) {
 		this.idEmpleado = idEmpleado;
 	}
 

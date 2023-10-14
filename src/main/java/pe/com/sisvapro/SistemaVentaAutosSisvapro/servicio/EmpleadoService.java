@@ -6,10 +6,10 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.entity.Empleado;
 
 public interface EmpleadoService {
 	
-	 List<Empleado> listar();
-	 Empleado listarPorId(String id);
-	 Empleado guardar(Empleado empleado); 
-	 Empleado actualizar(Empleado empleado); 
-	 void eliminar(String id);
+	 public List<Empleado> listarEmpleado();
+	 public Empleado obtenerEmpleado(int id);
+	 public Empleado agregarEmpleado(Empleado empleado); 
+	 public Empleado actualizarEmpleado(Empleado empleado); 
+	 public void eliminarEmpleado(int id);
 	 
 }
