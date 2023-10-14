@@ -1,4 +1,4 @@
-package pe.com.sisvapro.SistemaVentaAutosSisvapro.service.impl;
+package pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.impl;
 
 import java.util.List;
 
