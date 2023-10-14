@@ -1,4 +1,4 @@
-package pe.com.sisvapro.SistemaVentaAutosSisvapro.ServiceImpl;
+package pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

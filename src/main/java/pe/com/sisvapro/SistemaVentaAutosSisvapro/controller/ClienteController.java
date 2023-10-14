@@ -1,4 +1,4 @@
-package pe.com.sisvapro.SistemaVentaAutosSisvapro.Controller;
+package pe.com.sisvapro.SistemaVentaAutosSisvapro.controller;
 
 public class ClienteController {
 

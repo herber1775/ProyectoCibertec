@@ -1,4 +1,4 @@
-package pe.com.sisvapro.SistemaVentaAutosSisvapro.Controller;
+package pe.com.sisvapro.SistemaVentaAutosSisvapro.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
