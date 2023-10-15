@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2023-10-11T20:56:47.655-05:00  INFO 8304 --- [restartedMain] S.SistemaVentaDeAutosSisvaproApplication : Starting SistemaVentaDeAutosSisvaproApplication using Java 17.0.2 with PID 8304 (C:\Users\herbe\OneDrive\Documentos\workspace java\ProyectoSisvapro\target\classes started by herbe in C:\Users\herbe\OneDrive\Documentos\workspace java\ProyectoSisvapro)
 2023-10-11T20:56:47.662-05:00  INFO 8304 --- [restartedMain] S.SistemaVentaDeAutosSisvaproApplication : No active profile set, falling back to 1 default profile: "default"
 2023-10-11T20:56:47.736-05:00  INFO 8304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
@@ -4608,3 +4609,10 @@ Caused by: java.sql.SQLSyntaxErrorException: Incorrect table definition; there c
 2023-10-14T23:11:15.752-05:00  INFO 17032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-10-14T23:11:15.757-05:00  INFO 17032 --- [restartedMain] S.SistemaVentaDeAutosSisvaproApplication : Started SistemaVentaDeAutosSisvaproApplication in 0.985 seconds (process running for 1048.728)
 2023-10-14T23:11:15.760-05:00  INFO 17032 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+=======
+2023-10-15T00:00:26.473-05:00  INFO 5888 --- [RMI TCP Connection(49)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-10-15T00:00:26.494-05:00  INFO 5888 --- [RMI TCP Connection(49)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-15T00:00:26.503-05:00  INFO 5888 --- [RMI TCP Connection(49)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-15T00:00:26.507-05:00  INFO 5888 --- [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-15T00:00:26.511-05:00  INFO 5888 --- [RMI TCP Connection(49)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+>>>>>>> devMerge

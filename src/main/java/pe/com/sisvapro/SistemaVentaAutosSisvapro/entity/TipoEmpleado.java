@@ -10,7 +10,6 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tb_tipo_empleado")
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class TipoEmpleado {
@@ -24,4 +23,35 @@ public class TipoEmpleado {
     @OneToMany(mappedBy = "objTipo")
     @JsonIgnore
     Set<Empleado> empleado;
+
+	public int getIdTipo() {
+		return idTipo;
+	}
+
+	public void setIdTipo(int idTipo) {
+		this.idTipo = idTipo;
+	}
+
+	public String getDescrip() {
+		return descrip;
+	}
+
+	public void setDescrip(String descrip) {
+		this.descrip = descrip;
+	}
+
+	public Set<Empleado> getEmpleado() {
+		return empleado;
+	}
+
+	public void setEmpleado(Set<Empleado> empleado) {
+		this.empleado = empleado;
+	}
+    
+  
+    
+    
+    
+    
+    
 }
