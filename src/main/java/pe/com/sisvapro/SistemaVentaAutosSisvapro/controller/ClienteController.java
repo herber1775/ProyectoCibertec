@@ -44,5 +44,4 @@ public class ClienteController {
 		 clienteservice.deleteClient(idcli);
 	    }
 		
-	
 }
