@@ -4,6 +4,7 @@ package pe.com.sisvapro.SistemaVentaAutosSisvapro.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,8 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
 @RestController
 @RequestMapping("/empleado")
 @AllArgsConstructor
+@CrossOrigin("*")
+
 public class EmpleadoController {
 	
     private EmpleadoService empleadoService;
@@ -35,20 +38,20 @@ public class EmpleadoController {
 	        return empleadoService.obtenerEmpleado(id);
 	    }
 	 
-	 @PostMapping("/insertar")
-		@ResponseBody
-		public Empleado agregarEmpleado(@RequestBody Empleado empleado) {
-			return empleadoService.agregarEmpleado(empleado);
-		}
+	 @PostMapping
+	 @ResponseBody
+	 public Empleado agregarEmpleado(@RequestBody Empleado empleado) {
+	   return empleadoService.agregarEmpleado(empleado);
+	 }
 	 
-	 @PutMapping("/actualizar")
+	 @PutMapping
 		@ResponseBody
 		public Empleado actualizarEmpleado(@RequestBody Empleado empleado) {
 			return empleadoService.actualizarEmpleado(empleado);
 		}
 	 
 
-	 @DeleteMapping("/eliminar/{id}")
+	 @DeleteMapping("/{id}")
 		public void eliminarEmpleado(@PathVariable int id) {
 		 empleadoService.eliminarEmpleado(id);
 		}
