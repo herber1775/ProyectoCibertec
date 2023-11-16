@@ -21,4 +21,30 @@ public class Marca {
     @JsonIgnore
     Set<Carro> carro;
 
+	public int getIdmarca() {
+		return idmarca;
+	}
+
+	public void setIdmarca(int idmarca) {
+		this.idmarca = idmarca;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public Set<Carro> getCarro() {
+		return carro;
+	}
+
+	public void setCarro(Set<Carro> carro) {
+		this.carro = carro;
+	}
+    
+    
+
 }
