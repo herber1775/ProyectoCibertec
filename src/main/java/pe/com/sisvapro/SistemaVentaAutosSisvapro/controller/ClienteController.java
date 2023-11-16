@@ -28,18 +28,18 @@ public class ClienteController {
 	private ClienteService clienteservice;
 	IClienteRepository clienteRepository;
 	
-	@GetMapping("/cliente")
+	@GetMapping
 	public List<Cliente> lisClient() {
 		return clienteservice.listarCliente();
 	}
 	
-	@PostMapping("/insertCliente")
+	@PostMapping
 	@ResponseBody
 	public Cliente insertCliente(@RequestBody Cliente cliente) {
 		return clienteservice.insertCliente(cliente);
 	}
 	
-	@PutMapping("/updateCliente")
+	@PutMapping
 	@ResponseBody
 	public Cliente updateClient(@RequestBody Cliente cliente) {
 		return clienteservice.updateClient(cliente);
