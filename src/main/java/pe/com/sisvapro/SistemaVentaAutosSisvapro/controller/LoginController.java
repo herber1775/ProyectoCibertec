@@ -1,5 +1,6 @@
 package pe.com.sisvapro.SistemaVentaAutosSisvapro.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,12 +11,12 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
 
 @RestController
 @RequestMapping("")
+@AllArgsConstructor
 public class LoginController {
-    @Autowired
     private EmpleadoService servicioEmpleado;
 
-    @GetMapping("/empleadouserclave/{user}/{clave}")
-    public Empleado obtenerEmpleadoUserClave(@PathVariable String user,@PathVariable String clave){
-        return servicioEmpleado.obtenerEmpleadoUseryClave(user, clave);
+    @GetMapping("/validar/{user}/{clave}")
+    public Empleado validar(@PathVariable String user,@PathVariable String clave){
+        return servicioEmpleado.validar(user, clave);
     }
 }

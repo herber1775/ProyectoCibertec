@@ -11,6 +11,6 @@ public interface EmpleadoService {
 	 public Empleado agregarEmpleado(Empleado empleado); 
 	 public Empleado actualizarEmpleado(Empleado empleado); 
 	 public void eliminarEmpleado(int id);
-	 Empleado obtenerEmpleadoUseryClave(String user, String clave);
+	 Empleado validar(String user, String clave);
 	 
 }
