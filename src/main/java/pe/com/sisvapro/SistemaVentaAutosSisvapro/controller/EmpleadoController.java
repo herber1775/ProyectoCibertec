@@ -20,7 +20,7 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.entity.Empleado;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
 
 @RestController
-@RequestMapping("/empleado")
+@RequestMapping("/empleados")
 @AllArgsConstructor
 @CrossOrigin("*")
 
