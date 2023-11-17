@@ -39,9 +39,9 @@ public class ClienteController {
 		return clienteservice.insertCliente(cliente);
 	}
 	
-	@PutMapping
+	@PutMapping("/{idcli}")
 	@ResponseBody
-	public Cliente updateClient(@RequestBody Cliente cliente) {
+	public Cliente updateClient(@PathVariable int idcli, @RequestBody Cliente cliente) {
 		return clienteservice.updateClient(cliente);
 	}
 	

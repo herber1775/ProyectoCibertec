@@ -19,7 +19,7 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.CarroService;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/carro")
+@RequestMapping("/carros")
 public class CarroController {
 	
 	private CarroService carroService;
