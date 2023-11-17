@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.entity.Cliente;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.repositorio.IClienteRepository;
@@ -35,13 +36,13 @@ public class ClienteController {
 	
 	@PostMapping
 	@ResponseBody
-	public Cliente insertCliente(@RequestBody Cliente cliente) {
+	public Cliente insertCliente(@RequestBody @Valid Cliente cliente) {
 		return clienteservice.insertCliente(cliente);
 	}
 	
 	@PutMapping
 	@ResponseBody
-	public Cliente updateClient(@RequestBody Cliente cliente) {
+	public Cliente updateClient(@RequestBody @Valid Cliente cliente) {
 		return clienteservice.updateClient(cliente);
 	}
 	

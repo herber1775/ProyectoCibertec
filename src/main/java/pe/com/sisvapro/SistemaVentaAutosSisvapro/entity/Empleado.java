@@ -1,6 +1,8 @@
 package pe.com.sisvapro.SistemaVentaAutosSisvapro.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,21 +18,28 @@ public class Empleado {
     @Column(name = "id_empleado")
     private int idEmpleado;
 
+    @NotBlank(message = "El DNI no puede estar en blanco")
+    @Size(min = 8, max = 8, message = "El DNI debe tener exactamente 8 dígitos")
     @Column(name = "dni")
     private String dni;
 
+    @NotBlank(message = "El nombre no puede estar en blanco")
     @Column(name = "nombre")
     private String nom;
 
+    @NotBlank(message = "El apellido no puede estar en blanco")
     @Column(name = "apellido")
     private String ape;
 
+    @NotBlank(message = "El telefono no puede estar en blanco")
     @Column(name = "telefono")
     private String tel;
 
+    @NotBlank
     @Column(name = "user")
     private String user;
-
+    
+    @NotBlank
     @Column(name = "clave")
     private String clave;
 

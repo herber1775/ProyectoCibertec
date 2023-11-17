@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.entity.Empleado;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
@@ -40,13 +41,13 @@ public class EmpleadoController {
 	 
 	 @PostMapping
 	 @ResponseBody
-	 public Empleado agregarEmpleado(@RequestBody Empleado empleado) {
+	 public Empleado agregarEmpleado(@RequestBody @Valid Empleado empleado) {
 	   return empleadoService.agregarEmpleado(empleado);
 	 }
 	 
 	 @PutMapping
 		@ResponseBody
-		public Empleado actualizarEmpleado(@RequestBody Empleado empleado) {
+		public Empleado actualizarEmpleado(@RequestBody @Valid Empleado empleado) {
 			return empleadoService.actualizarEmpleado(empleado);
 		}
 	 
