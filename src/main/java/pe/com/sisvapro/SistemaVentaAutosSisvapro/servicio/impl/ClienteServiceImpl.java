@@ -28,6 +28,7 @@ public class ClienteServiceImpl implements ClienteService{
 		// TODO Auto-generated method stub
 		Cliente objClientes = cliRepo.findById(cliente.getIdCli()).orElse(null);
 		objClientes.setNombre(cliente.getNombre());
+		objClientes.setApellido(cliente.getApellido());
 		objClientes.setCorreo(cliente.getCorreo());
 		objClientes.setDireccion(cliente.getDireccion());
 		objClientes.setDni(cliente.getDni());
