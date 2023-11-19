@@ -2,6 +2,7 @@ package pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.impl;
 
 import java.util.List;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -14,6 +15,7 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
 public class EmpleadoImpl implements EmpleadoService {
 	
 	private IEmpleadoRepository repoEmpleado;
+	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public List<Empleado> listarEmpleado() {
@@ -27,6 +29,8 @@ public class EmpleadoImpl implements EmpleadoService {
 
 	@Override
 	public Empleado agregarEmpleado(Empleado empleado) {
+		String passwordEncriptada = passwordEncoder.encode(empleado.getClave());
+		empleado.setClave(passwordEncriptada);//si
 		 return repoEmpleado.save(empleado);
 	}
 
