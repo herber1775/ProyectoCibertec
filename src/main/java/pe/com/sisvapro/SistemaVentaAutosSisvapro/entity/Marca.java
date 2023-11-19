@@ -15,7 +15,7 @@ public class Marca {
     private int idmarca;
 
     @Column(name = "nomMarca")
-    private String descripcion;
+    private String nomMarca;
 
     @OneToMany(mappedBy = "objMarca")
     @JsonIgnore
@@ -29,12 +29,12 @@ public class Marca {
 		this.idmarca = idmarca;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public String getnomMarca() {
+		return nomMarca;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
+	public void setnomMarca(String nomMarca) {
+		this.nomMarca = nomMarca;
 	}
 
 	public Set<Carro> getCarro() {

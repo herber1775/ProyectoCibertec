@@ -12,9 +12,5 @@ public interface ClienteService {
 	public void deleteClient(int idcli);
 	public List<Cliente> listarCliente();
 	
-	
-	
-	
-	
 
 }

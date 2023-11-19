@@ -1,6 +1,10 @@
 package pe.com.sisvapro.SistemaVentaAutosSisvapro.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,27 +21,37 @@ public class Carro {
     @Column(name = "id_carro")
     private int id;
 
+    @NotBlank
     @Column(name = "descripcion")
     private String descripcion;
-
+    
+    @NotBlank
     @Column(name = "modelo")
     private String modelo;
     
+    @NotBlank
     @Column(name = "origen")
     private String origen;
 
+    @NotBlank
     @Column(name = "combustible")
     private String Combustible;
 
+    @NotNull(message = "El precio no puede ser nulo")
+    @DecimalMin(value = "0.0", inclusive = false, message = "El precio debe ser mayor que cero")
     @Column(name = "precio")
     private double precio;
-
+    
+    @NotNull(message = "El stock no puede ser nulo")
     @Column(name = "stock")
     private int stock;
     
+    @NotNull(message = "El anio no puede ser nulo")
+    @Digits(integer = 4, fraction = 0, message = "El año debe ser un número de 4 dígitos")
     @Column(name = "anio")
     private int anio;
     
+    @NotBlank
     @Column(name = "nrSerie")
     private String nroSerie;
     
