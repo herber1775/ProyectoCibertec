@@ -34,7 +34,6 @@ public class Cliente {
     @Column(name = "correo")
     private String correo;
 
-    @NotBlank
     @Column(name = "telefono")
     private String telefono;
 
