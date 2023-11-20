@@ -52,7 +52,7 @@ public class Carro {
     private int anio;
     
     @NotBlank
-    @Column(name = "nrSerie")
+    @Column(name = "nr_serie")
     private String nroSerie;
     
     @ManyToOne

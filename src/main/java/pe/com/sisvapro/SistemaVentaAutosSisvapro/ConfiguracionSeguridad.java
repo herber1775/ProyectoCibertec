@@ -36,8 +36,8 @@ public class ConfiguracionSeguridad {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(x -> x
-                        .requestMatchers("/validar").permitAll() //todos permitidos
-                        .requestMatchers("/**").authenticated()).csrf(AbstractHttpConfigurer::disable)
+                        //.requestMatchers("/validar").permitAll() //todos permitidos
+                        .requestMatchers("/**").permitAll()).csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(withDefaults())
                 .formLogin(withDefaults()); //autenticar
 

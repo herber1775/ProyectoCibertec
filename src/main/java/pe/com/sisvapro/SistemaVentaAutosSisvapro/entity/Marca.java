@@ -14,7 +14,7 @@ public class Marca {
     @Column(name = "id_marca")
     private int idmarca;
 
-    @Column(name = "nomMarca")
+    @Column(name = "nom_marca")
     private String nomMarca;
 
     @OneToMany(mappedBy = "objMarca")
