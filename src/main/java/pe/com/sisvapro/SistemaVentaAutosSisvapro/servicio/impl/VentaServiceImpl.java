@@ -40,6 +40,7 @@ public class VentaServiceImpl implements VentaService {
         Venta ventaEntity = repoVenta.save(venta.getVenta());
         for (DetalleVenta detalle: venta.getDetalleVenta()){
             Carro carro = repoCarro.findById(detalle.getCarro().getId()).orElse(null);
+            carro.setStock(carro.getStock() - detalle.getCantidad());
             if (carro.getStock() < 0){
                 throw new Exception();
             }
