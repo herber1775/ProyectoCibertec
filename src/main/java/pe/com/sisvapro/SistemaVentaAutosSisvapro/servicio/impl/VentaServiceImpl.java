@@ -36,9 +36,11 @@ public class VentaServiceImpl implements VentaService {
     @Override
     @Transactional(rollbackOn = Exception.class)
     public Venta agregarVenta(VentaTransactionDto venta) throws Exception {
+        System.out.println("En service");
         Venta ventaEntity = repoVenta.save(venta.getVenta());
         for (DetalleVenta detalle: venta.getDetalleVenta()){
             Carro carro = repoCarro.findById(detalle.getCarro().getId()).orElse(null);
+            carro.setStock(carro.getStock() - detalle.getCantidad());
             if (carro.getStock() < 0){
                 throw new Exception();
             }
@@ -66,5 +68,10 @@ public class VentaServiceImpl implements VentaService {
     @Override
     public void eliminarVenta(int id) {
         repoVenta.deleteById(id);
+    }
+
+    @Override
+    public Venta obtenerUltimaVenta() {
+        return repoVenta.findFirstByOrderByIdDesc().orElse(null);
     }
 }

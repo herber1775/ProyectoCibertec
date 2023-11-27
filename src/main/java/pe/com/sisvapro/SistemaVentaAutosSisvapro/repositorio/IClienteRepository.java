@@ -14,6 +14,8 @@ public interface IClienteRepository extends JpaRepository<Cliente, Integer> {
     
     public List<Cliente> findByApellido(String apellido);
 
+
+
     
     
     

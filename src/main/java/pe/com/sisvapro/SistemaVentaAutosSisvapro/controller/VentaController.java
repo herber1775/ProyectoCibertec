@@ -30,7 +30,13 @@ public class VentaController {
     @ResponseBody
     @ResponseStatus(code = HttpStatus.OK)
     public Venta agregarVenta(@RequestBody VentaTransactionDto venta) throws Exception{
-        return servicioVenta.agregarVenta(venta);
+        try {
+            System.out.println("En controller");
+            return servicioVenta.agregarVenta(venta);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        return null;
     }
 
     @PutMapping("")
@@ -42,5 +48,10 @@ public class VentaController {
     @DeleteMapping("/{id}")
     public void eliminarVenta(@PathVariable int id){
         servicioVenta.eliminarVenta(id);
+    }
+
+    @GetMapping("/ultima")
+    public Venta obtenerUltimaVenta(){
+        return servicioVenta.obtenerUltimaVenta();
     }
 }

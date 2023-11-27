@@ -1,5 +1,6 @@
 package pe.com.sisvapro.SistemaVentaAutosSisvapro.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import pe.com.sisvapro.SistemaVentaAutosSisvapro.utils.CustomAuthorityDeserializer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -131,12 +133,17 @@ public class Empleado implements UserDetails {
 		this.objTipo = objTipo;
 	}
 
-	@Override
+	/*@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		//return new ArrayList<>();
 		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"), new SimpleGrantedAuthority("ROLE_ADMIN"));
-	}
+	}*/
 
+	@JsonDeserialize(using = CustomAuthorityDeserializer.class)
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"), new SimpleGrantedAuthority("ROLE_ADMIN"));
+	}
 	@Override
 	public String getPassword() {
 		return clave;

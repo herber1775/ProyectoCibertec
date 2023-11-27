@@ -15,4 +15,6 @@ public interface VentaService {
     Venta actualizarVenta(Venta venta);
 
     void eliminarVenta(int id);
+
+    Venta obtenerUltimaVenta();
 }
