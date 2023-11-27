@@ -19,10 +19,11 @@ public class LoginController {
         return servicioEmpleado.validar(user, clave);
     }*/
 
-
+    /*
     //@PreAuthorize("permitAll()")//permite a todos
     @PostMapping("/validar")
     public Empleado validar(@RequestBody LoginDto loginDto){
         return servicioEmpleado.validar(loginDto.getUser(), loginDto.getClave());
     }
+	*/
 }
