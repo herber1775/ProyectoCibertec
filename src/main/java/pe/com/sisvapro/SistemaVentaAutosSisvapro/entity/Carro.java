@@ -35,10 +35,6 @@ public class Carro {
     @Column(name = "origen")
     private String origen;
 
-    @NotBlank
-    @Column(name = "combustible")
-    private String Combustible;
-
     @NotNull(message = "El precio no puede ser nulo")
     @DecimalMin(value = "0.0", inclusive = false, message = "El precio debe ser mayor que cero")
     @Column(name = "precio")
@@ -62,6 +58,11 @@ public class Carro {
     @ManyToOne
     @JoinColumn(name = "id_marca")
     Marca objMarca;
+    
+    @NotBlank
+    @Column(name = "combustible")
+    private String Combustible;
+
 
 	public int getId() {
 		return id;

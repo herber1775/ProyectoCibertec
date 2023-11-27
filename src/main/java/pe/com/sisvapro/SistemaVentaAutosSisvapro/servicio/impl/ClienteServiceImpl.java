@@ -47,9 +47,10 @@ public class ClienteServiceImpl implements ClienteService{
 		return cliRepo.findAll();
 	}
 
+	@Override
+	public Cliente findByDni(String dni) {
+		return cliRepo.findByDni(dni);
+	}
 
-	
-	
-	
 
 }

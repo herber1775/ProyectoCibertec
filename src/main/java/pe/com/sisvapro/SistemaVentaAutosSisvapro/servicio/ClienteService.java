@@ -11,6 +11,8 @@ public interface ClienteService {
 	public Cliente updateClient(Cliente cliente);
 	public void deleteClient(int idcli);
 	public List<Cliente> listarCliente();
+
+	public Cliente findByDni(String dni);
 	
 
 }

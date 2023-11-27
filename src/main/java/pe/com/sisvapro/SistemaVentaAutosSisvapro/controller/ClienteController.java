@@ -51,4 +51,9 @@ public class ClienteController {
 		 clienteservice.deleteClient(idcli);
 	    }
 		//http://localhost:8080/
+
+	@GetMapping("/pordni/{dni}")
+	 public Cliente findByDni(@PathVariable String dni){
+		return clienteservice.findByDni(dni);
+	 }
 }

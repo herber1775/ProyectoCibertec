@@ -23,7 +23,7 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.repositorio.ICarroRepository;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.CarroService;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:4200")
 @AllArgsConstructor
 @RequestMapping("/carros")
 public class CarroController {
@@ -39,7 +39,7 @@ public class CarroController {
 		return carroService.listarCarro();
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("{id}")
 	public Carro obtenerCarro(@PathVariable int id) {
 		return carroService.obtenerCarro(id);
 	}
@@ -65,7 +65,7 @@ public class CarroController {
 		}
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("{id}")
 	public void eliminarCarro(@PathVariable int id) {
 		carroService.eliminarCarro(id);
 	}
