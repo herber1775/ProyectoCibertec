@@ -200,7 +200,7 @@ public class CarroServiceImpl implements CarroService {
 	            objCarroAct.setStock(objCarro.getStock());
 	            objCarroAct.setAnio(objCarro.getAnio());
 	            objCarroAct.setNroSerie(objCarro.getNroSerie());
-	            objCarroAct.getObjMarca().setIdmarca(objCarro.getObjMarca().getIdmarca());
+	            objCarroAct.setObjMarca(objCarro.getObjMarca());
 	        } else {
 	            System.out.println("Carro no encontrado con ID: " + objCarro.getId());
 	        }
@@ -218,6 +218,11 @@ public class CarroServiceImpl implements CarroService {
 	        System.out.println("Error: " + e.getMessage());
 	    }
 		
+	}
+
+	@Override
+	public List<Carro> listarPorMarca(int objMarca) {
+		return repoCarro.findByObjMarcaIdmarca(objMarca);
 	}
 	
 	

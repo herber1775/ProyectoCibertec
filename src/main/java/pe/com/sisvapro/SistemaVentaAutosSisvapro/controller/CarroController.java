@@ -48,8 +48,8 @@ public class CarroController {
 	@PostMapping
 	@ResponseBody
 	public ResponseEntity<Integer> agregarCarro(@RequestBody @Valid Carro carro) {
-	    Carro nuevoCarro = carroService.agregarCarro(carro);  
-	    return ResponseEntity.status(HttpStatus.CREATED).body(nuevoCarro.getId());
+		Carro nuevoCarro = carroService.agregarCarro(carro);
+		return ResponseEntity.status(HttpStatus.CREATED).body(nuevoCarro.getId());
 	}
 	
 	// Actualizar Carro
@@ -68,6 +68,11 @@ public class CarroController {
 	@DeleteMapping("/{id}")
 	public void eliminarCarro(@PathVariable int id) {
 		carroService.eliminarCarro(id);
+	}
+
+	@GetMapping("/marca/{marca}")
+	public List<Carro> listarPorMarca(@PathVariable int marca) {
+		return carroService.listarPorMarca(marca);
 	}
 	
 

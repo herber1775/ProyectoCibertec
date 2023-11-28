@@ -12,5 +12,7 @@ public interface CarroService {
 	public Carro agregarCarro(Carro objCarro);
 	public Carro actualizarCarro(Carro objCarro);
 	public void eliminarCarro(int id);
+
+	public List<Carro> listarPorMarca(int objMarca);
 	
 }

@@ -2,6 +2,7 @@ package pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.impl;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,9 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.repositorio.IClienteRepository;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.ClienteService;
 
 @Service
+@AllArgsConstructor
 public class ClienteServiceImpl implements ClienteService{
-	
-	
-	@Autowired
+
 	private IClienteRepository cliRepo;
 	
 	

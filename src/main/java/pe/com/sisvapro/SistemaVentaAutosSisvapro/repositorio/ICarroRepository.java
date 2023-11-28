@@ -9,6 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ICarroRepository extends JpaRepository<Carro, Integer> {
 	public List<Carro> findByid (int idcarro);
+
+    List<Carro> findByObjMarcaIdmarca(int id);
 	
 
     @Query("select c from Carro as c where modelo like CONCAT('%', :modelo, '%')")
