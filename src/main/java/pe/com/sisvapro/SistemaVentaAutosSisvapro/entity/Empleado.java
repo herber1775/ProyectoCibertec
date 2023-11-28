@@ -3,6 +3,7 @@ package pe.com.sisvapro.SistemaVentaAutosSisvapro.entity;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -42,6 +43,7 @@ public class Empleado implements UserDetails {
     private String ape;
 
     @NotBlank(message = "El telefono no puede estar en blanco")
+    @Pattern(regexp = "\\d{7,9}", message = "El número de teléfono debe tener un formato de 7 a 9 dígitos")
     @Column(name = "telefono")
     private String tel;
 

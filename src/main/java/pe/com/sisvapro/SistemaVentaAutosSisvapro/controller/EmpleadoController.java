@@ -21,9 +21,9 @@ import pe.com.sisvapro.SistemaVentaAutosSisvapro.entity.Empleado;
 import pe.com.sisvapro.SistemaVentaAutosSisvapro.servicio.EmpleadoService;
 
 @RestController
-@RequestMapping("/empleados")
+@CrossOrigin("http://localhost:4200")
 @AllArgsConstructor
-@CrossOrigin("*")
+@RequestMapping("/empleados")
 
 public class EmpleadoController {
 	

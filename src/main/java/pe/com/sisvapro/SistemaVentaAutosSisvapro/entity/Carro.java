@@ -3,8 +3,10 @@ package pe.com.sisvapro.SistemaVentaAutosSisvapro.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,16 +35,13 @@ public class Carro {
     @Column(name = "origen")
     private String origen;
 
-    @NotBlank
-    @Column(name = "combustible")
-    private String Combustible;
-
     @NotNull(message = "El precio no puede ser nulo")
     @DecimalMin(value = "0.0", inclusive = false, message = "El precio debe ser mayor que cero")
     @Column(name = "precio")
     private double precio;
     
     @NotNull(message = "El stock no puede ser nulo")
+    @Max(value = 999999, message = "El stock debe ser igual o menor que 999999")
     @Column(name = "stock")
     private int stock;
     
@@ -52,12 +51,18 @@ public class Carro {
     private int anio;
     
     @NotBlank
+    @Size(min = 17, max = 17, message = "El número de serie debe tener exactamente 17 dígitos.")
     @Column(name = "nrSerie")
     private String nroSerie;
     
     @ManyToOne
     @JoinColumn(name = "id_marca")
     Marca objMarca;
+    
+    @NotBlank
+    @Column(name = "combustible")
+    private String Combustible;
+
 
 	public int getId() {
 		return id;

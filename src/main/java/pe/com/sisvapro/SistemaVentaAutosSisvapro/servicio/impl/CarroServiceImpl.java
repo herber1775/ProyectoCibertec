@@ -138,7 +138,7 @@ public class CarroServiceImpl implements CarroService {
 	        if (objCarro.getObjMarca().getIdmarca() != -1) {
 	        	objCarro.getObjMarca().setIdmarca(objCarro.getObjMarca().getIdmarca());
 			} else {
-	            System.out.println("Registrar un texto válido en la descripción: " + objCarro.getDescripcion());
+	            System.out.println("Registrar un texto válido en la marca: " + objCarro.getDescripcion());
 			}
 
 			if (validarOrigen(objCarro.getOrigen())) {
