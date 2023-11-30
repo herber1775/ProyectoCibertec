@@ -47,11 +47,6 @@ public class TipoEmpleado {
 	public void setEmpleado(Set<Empleado> empleado) {
 		this.empleado = empleado;
 	}
-    
-  
-    
-    
-    
-    
-    
+      
+      
 }
